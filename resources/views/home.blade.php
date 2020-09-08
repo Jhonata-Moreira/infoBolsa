@@ -9,3 +9,19 @@
 @section('content')
     <h1>You are logged</h1>
 @stop
+
+@section('js')
+    <script src="{{ asset('js/axios.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+        <script>
+            $(document).ready(function(){
+                $.ajax({
+                    url: 'api/Invest/btow3',
+                    success: function (response) {
+                        console.log(response)                    }
+                })
+
+            })
+
+        </script>
+@endsection

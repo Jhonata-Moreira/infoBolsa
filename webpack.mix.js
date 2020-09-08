@@ -11,5 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.js('node_modules/axios/index.js', 'public/js/axios.js');
+mix.js('node_modules/jquery/src/jquery.js', 'public/js');
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');

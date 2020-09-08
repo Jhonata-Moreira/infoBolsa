@@ -86,6 +86,11 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
+    @hasSection('js')
+        @yield('js')
+
+    @endif
+
 </body>
 
 </html>
