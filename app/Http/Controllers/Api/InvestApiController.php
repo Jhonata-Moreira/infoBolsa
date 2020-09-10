@@ -10,10 +10,8 @@ use App\Services\InvestApi;
 class InvestApiController extends Controller
 {
 
-    public function getData()
+    public function getData($symbol)
     {
-        $data = InvestApi::searchSymbol('btow3');
-
-        return response()->json(\GuzzleHttp\json_decode($data), 200);
+        return response()->json(\GuzzleHttp\json_decode(InvestApi::searchSymbol($symbol)), 200);
     }
 }

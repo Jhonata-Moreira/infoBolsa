@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace' => 'Api', 'as' => 'api.'], function (){
-   Route::any('/Invest', 'InvestApiController@getData')->name('invest.getData');
-});
+Route::get('/invest/{symbol}', 'Api\InvestApiController@getData')->name('invest.getData');
